@@ -170,3 +170,9 @@ textarea {
   visibility: visible;
   transform: translateY(0);
 }
+
+.nav-link {
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  display: inline-block;
+}
