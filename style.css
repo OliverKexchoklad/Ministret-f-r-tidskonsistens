@@ -128,3 +128,45 @@ textarea {
   width: 18px;
   height: 18px;
 }
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link {
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  background: white;
+  border-radius: 10px;
+  min-width: 220px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.9rem 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
