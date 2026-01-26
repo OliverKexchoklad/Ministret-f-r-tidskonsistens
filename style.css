@@ -176,3 +176,67 @@ textarea {
   padding: 0.5rem 0.8rem;
   display: inline-block;
 }
+
+.login {
+  position: relative;
+}
+
+/* Login-box */
+.login-box {
+  position: absolute;
+  right: 0;
+  top: 140%;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.25s ease;
+  z-index: 1000;
+}
+
+/* Visa login på hover */
+.login:hover .login-box {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Felmeddelandet – dolt från början */
+.login-error {
+  display: none;
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  color: darkred;
+}
+
+/* VISAS när användaren interagerat (försökt logga in) */
+.login-box:focus-within .login-error {
+  display: block;
+}
+
+.nav-link {
+  white-space: nowrap;
+}
+
