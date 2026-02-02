@@ -223,7 +223,7 @@ textarea {
   cursor: pointer;
 }
 
-/* Felmeddelandet – dolt från början */
+
 .login-error {
   display: none;
   margin-top: 0.6rem;
@@ -231,7 +231,7 @@ textarea {
   color: darkred;
 }
 
-/* VISAS när användaren interagerat (försökt logga in) */
+
 .login-box:focus-within .login-error {
   display: block;
 }
@@ -239,4 +239,26 @@ textarea {
 .nav-link {
   white-space: nowrap;
 }
+
+
+#send-toggle {
+  display: none;
+}
+
+.confirmation {
+  display: none;
+  margin-top: 1rem;
+  color: green;
+}
+
+#send-toggle:checked ~ .confirmation {
+  display: block;
+}
+
+#send-toggle:checked ~ form {
+  display: none;
+}
+
+
+
 
