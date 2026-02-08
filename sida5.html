@@ -52,21 +52,29 @@
 
   <input type="checkbox" id="send-toggle">
 
-  <form>
-    <input type="email" placeholder="Avsändare (e-postadress)" required>
-    <input type="text" placeholder="Rubrik" required>
+  <form id="contact-form">
+    <div class="form-group">
+      <input type="email" id="email" placeholder="Avsändare (e-postadress)" required>
+      <span class="error-message">Vänligen ange en giltig e-postadress</span>
+    </div>
+    
+    <div class="form-group">
+      <input type="text" id="rubrik" placeholder="Rubrik" required>
+      <span class="error-message">Rubrik krävs</span>
+    </div>
 
-    <textarea placeholder="Innehåll" rows="6" required></textarea>
+    <div class="form-group">
+      <textarea id="innehall" placeholder="Innehåll" rows="6" required></textarea>
+      <span class="error-message">Innehåll krävs</span>
+    </div>
 
-    <label for="send-toggle" class="button mtk-button-hover" class="button">
-      Skicka
-    </label>
+    <label for="send-toggle" class="button mtk-button-hover" style="display: inline-block; cursor: pointer; text-align: center;">Skicka</label>
   </form>
 
- <p class="confirmation">
-  <span style="color: green;">✔ Överföringen är slutförd.</span><br>
-  <span style="color: darkred;"><strong>Observera: Otillåten kommunikation kan medföra korrigering av personlig tidsaxel.</strong></span>
-</p>
+  <p class="confirmation">
+    <span style="color: green;">✔ Överföringen är slutförd.</span><br>
+    <span style="color: darkred;"><strong>Observera: Otillåten kommunikation kan medföra korrigering av personlig tidsaxel.</strong></span>
+  </p>
 </div>
 
 
@@ -84,7 +92,7 @@
 <footer class="mtk-footer">
   <div class="footer-container">
     <div class="footer-section">
-      <h3>MTK – Ministeriet för Tidskonsistens</h3>
+      <h3>MTK - Ministeriet för Tidskonsistens</h3>
       <p>Global ledare inom kausal stabilitet och tidslinje-komplians.</p>
       <p>System etablerat: 4-1-2067</p>
     </div>
@@ -107,7 +115,6 @@
     </div>
   </div>
 
-  <!-- Easter Egg 1: Tidsresenärens meddelande -->
   <div class="easter-egg">
     <input type="checkbox" id="egg1-toggle">
     <label for="egg1-toggle" class="egg-label">🕰️</label>
@@ -115,7 +122,7 @@
   </div>
 
   <div class="footer-bottom">
-    <p>&copy; 2067 MTK – Alla rättigheter reserverade.</p>
+    <p>&copy; 2067 MTK - Alla rättigheter reserverade.</p>
   </div>
 </footer>
 

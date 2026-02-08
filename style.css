@@ -123,6 +123,10 @@ nav {
   background: #0056b3;
 }
 
+.button-group {
+  padding-top: 1rem;
+}
+
 .card {
   background-color: #f7f9fc;
   padding: 1.5rem;
@@ -233,12 +237,50 @@ textarea {
   color: green;
 }
 
-#send-toggle:checked ~ .confirmation {
+#send-toggle:checked ~ form:valid {
+  display: none;
+}
+
+#send-toggle:checked ~ form:valid ~ .confirmation {
   display: block;
 }
 
-#send-toggle:checked ~ form {
+#send-toggle:not(:checked) ~ .confirmation {
   display: none;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  display: none;
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+  border-color: #d32f2f;
+}
+
+.form-group input:invalid:not(:placeholder-shown) + .error-message,
+.form-group textarea:invalid:not(:placeholder-shown) + .error-message {
+  display: block;
+}
+
+/* Visa felmeddelande när checkboxen är checked men formuläret är invalid */
+#send-toggle:checked ~ form:invalid .form-group input:invalid + .error-message,
+#send-toggle:checked ~ form:invalid .form-group textarea:invalid + .error-message {
+  display: block;
+}
+
+#send-toggle:checked ~ form:invalid .form-group input:invalid,
+#send-toggle:checked ~ form:invalid .form-group textarea:invalid {
+  border-color: #d32f2f;
 }
 
 /* Rapport-sida */
@@ -389,12 +431,6 @@ ol {
   max-width: 300px;
 }
 
-/* Visa meddelande när checkboxen är checkad */
 #egg1-toggle:checked ~ .egg-message {
   display: block;
 }
-
-
-
-
-
